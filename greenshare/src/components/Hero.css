@@ -1,0 +1,118 @@
+/* Hero Section */
+.hero {
+    margin-top: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full height of viewport */
+    position: relative;
+    background: radial-gradient(circle, #f8f77d 10%, #00ff80 60%);
+    overflow: hidden; /* Ensure no overflow */
+    text-align: center;
+  }
+  
+  /* Hero Content */
+  .hero-content {
+    z-index: 10;
+  }
+  
+  .hero h1 {
+    font-size: 4rem;
+    margin: 0;
+    font-weight: bold;
+    color: black;
+  }
+  
+  .hero p {
+    font-size: 1.2rem;
+    margin: 1rem 0 2rem;
+    line-height: 1.8;
+    color: black;
+  }
+  
+  /* Buttons */
+  .hero-buttons {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+  }
+  
+  .cta-btn {
+    padding: 0.8rem 2rem;
+    border: 2px solid black;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+  }
+  
+  .get-started {
+    background-color: white;
+    color: black;
+  }
+  
+  .learn-more {
+    background-color: transparent;
+    color: black;
+  }
+  
+  .get-started:hover {
+    background-color: black;
+    color: white;
+  }
+  
+  .learn-more:hover {
+    background-color: black;
+    color: white;
+  }
+  
+  /* Tree Illustrations */
+  .hero-illustration {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    z-index: 5;
+  }
+  
+  .tree {
+    width: 200px; /* Adjust tree size */
+    height: 200px;
+  }
+  
+  .left-tree {
+    margin-left: -20px;
+  }
+  
+  .right-tree {
+    margin-right: -20px;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .hero {
+      height: 80vh;
+    }
+  
+    .hero h1 {
+      font-size: 2.5rem;
+    }
+  
+    .hero p {
+      font-size: 1rem;
+    }
+  
+    .hero-buttons {
+      flex-direction: column;
+      gap: 1rem;
+    }
+  
+    .tree {
+      width: 150px; /* Smaller trees on small screens */
+    }
+  }
+  

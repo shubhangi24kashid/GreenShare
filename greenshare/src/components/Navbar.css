@@ -1,0 +1,126 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: #00FF99; /* Green accent */
+    color: black;
+    position: sticky;
+    top: 0; /* Stick to the top */
+    z-index: 1000; /* Ensure it's above other content */
+}
+
+  /* Logo */
+  .logo a {
+    text-decoration: none;
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: black;
+  }
+  
+  /* Navigation Links */
+  .nav-links {
+    display: flex;
+    gap: 2rem;
+    text-decoration: none;
+    font-size: 1rem;
+    color: black;
+  }
+  
+  .nav-links a {
+    text-decoration: none;
+    color: black;
+    font-weight: 500; 
+    transition: color 0.3s ease;
+  }
+  
+  .nav-links a:hover {
+    color: #a5d6a7; /* Light green hover */
+    text-decoration: underline;
+  }
+  
+  /* Auth Buttons (Login and Signup) */
+  .auth-buttons {
+    display: flex;
+    gap: 1rem;
+  }
+  /* Auth Buttons Container */
+.auth-buttons {
+    display: flex;
+    gap: 1rem; /* Space between buttons */
+  }
+  
+  /* Login Button */
+  .login-btn {
+    background-color: transparent; /* Transparent background */
+    color: black; /* Black text color */
+    text-decoration: none; /* No underline */
+    padding: 0.5rem 1rem; /* Padding for better click area */
+    border: none; /* No border */
+    cursor: pointer; /* Pointer cursor for interaction */
+    font-weight: 600; /* Slightly bold */
+    transition: background-color 0.3s ease; /* Smooth hover */
+  }
+  
+  /* Hover Effect for Login */
+  .login-btn:hover {
+    color: #a5d6a7; /* Light green hover */
+    text-decoration: underline;
+  }
+  
+  /* Get Started Button (Signup) */
+  .get-started-btn {
+    background-color: white; /* White background */
+    color: black; /* Black text */
+    border-radius: 20px; /* Rounded corners */
+    padding: 0.5rem 1.5rem; /* Comfortable padding */
+    font-weight: 600; /* Slightly bold */
+    text-decoration: none; /* No underline */
+    border: 2px; /* Black border */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth hover */
+  }
+  
+  /* Hover Effect for Get Started */
+  .get-started-btn:hover {
+    background-color: rgba(255, 255, 255, 0.911); /* Black background */
+    color: black; /* White text */
+  }
+  
+  
+  /* Responsive Menu Button */
+  .menu-toggle {
+    display: none;
+    font-size: 2rem;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+  }
+  
+  /* Responsive Design for Smaller Screens */
+  @media (max-width: 768px) {
+    .nav-links {
+      display: none;
+      flex-direction: column;
+      position: absolute;
+      top: 70px;
+      left: 0;
+      width: 100%;
+      background: #2e7d32;
+      text-align: center;
+      padding: 1rem 0;
+    }
+  
+    .nav-links.open {
+      display: flex;
+    }
+  
+    .menu-toggle {
+      display: block;
+    }
+  
+    .auth-buttons {
+      display: none; /* Hide auth buttons on small screens */
+    }
+  }
+  
