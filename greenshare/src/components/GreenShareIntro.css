@@ -1,0 +1,100 @@
+/* Main Section */
+.greenshare-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 80vh;
+    background: #111;
+    color: white;
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+  }
+  
+  /* Intro Text */
+  .intro-text h1 {
+    font-size: 3rem;
+    margin-bottom: 2rem;
+    animation: fadeIn 1.5s ease-in-out;
+  }
+  
+  /* Get Started Button */
+  .intro-btn {
+    padding: 1rem 2rem;
+    font-size: 1.2rem;
+    background: yellow;
+    color: black;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+  }
+  
+  .intro-btn:hover {
+    transform: scale(1.1);
+  }
+  
+  /* Sun Glow Effect */
+  .sun-glow {
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    width: 120px;
+    height: 120px;
+    background: radial-gradient(circle, yellow, transparent);
+    border-radius: 50%;
+    z-index: 1;
+    animation: glowPulse 3s infinite alternate;
+  }
+  
+  /* Cloud Overlay Using SVG */
+  .cloud-container {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+  }
+  
+  .clouds {
+    width: 100%;
+    height: auto;
+  }
+  
+  /* Animations */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes glowPulse {
+    from {
+      transform: scale(1);
+      opacity: 0.7;
+    }
+    to {
+      transform: scale(1.2);
+      opacity: 1;
+    }
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .intro-text h1 {
+      font-size: 2rem;
+    }
+  
+    .sun-glow {
+      width: 80px;
+      height: 80px;
+    }
+  }
+  
