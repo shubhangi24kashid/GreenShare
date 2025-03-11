@@ -27,7 +27,7 @@ const Navbar = () => {
       {/* Auth Buttons */}
       <div className="auth-buttons">
         <a href="/login" className="login-btn">Login</a>
-        <a href="/signup" className="get-started-btn">Get Started</a>
+        <a href="/Register" className="get-started-btn">Get Started</a>
       </div>
 
       {/* Mobile Menu Toggle */}

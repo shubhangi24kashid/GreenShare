@@ -1,0 +1,143 @@
+/* General Styling */
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+    background: #f3f4f6;
+  }
+  
+  /* Main Container */
+  main {
+    display: flex;
+    align-items: center; /* Center vertically */
+    justify-content: center; /* Center horizontally */
+    height: 100vh;
+    background: #f9fafb;
+  }
+  
+  /* Form Container */
+  .w-96 {
+    width: 100%;
+    max-width: 450px; /* Increased for better padding support */
+    background: #ffffff;
+    border-radius: 1rem;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+    padding: 2.5rem; /* Increased padding for better layout */
+    box-sizing: border-box; /* Ensure padding doesn't overflow */
+  }
+  
+  /* Form Heading */
+  h3 {
+    color: #00FF99;
+    text-align: center; /* Align left */
+    font-size: 2rem; /* Larger and bold for emphasis */
+    font-weight: 700;
+    margin-bottom: 2rem; /* Proper spacing below heading */
+  }
+  
+  /* Form Fields Wrapper */
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem; /* Increased gap for better separation */
+    margin-bottom: 1.5rem; /* Space between each input group */
+  }
+  
+  /* Label Styling */
+  label {
+    font-weight: 600;
+    color: #374151;
+    text-align: left; /* Ensure labels are aligned left */
+    margin-bottom: 0.25rem; /* Small space between label and input */
+  }
+  
+  /* Input Fields */
+  .input-field {
+    width: 100%;
+    padding: 1rem; /* Increased padding for better usability */
+    border: 1px solid #d1d5db;
+    border-radius: 0.75rem; /* Slightly more rounded corners */
+    outline: none;
+    transition: border 0.3s ease;
+    box-sizing: border-box; /* Avoid padding overflow */
+  }
+  
+  /* Input Field Focus */
+  .input-field:focus {
+    border-color: #00FF99;
+    box-shadow: 0 0 8px rgba(0, 255, 153, 0.3);
+  }
+  
+  /* Error Message */
+  .text-red-600 {
+    color: #dc2626;
+    font-size: 0.9rem;
+    margin-top: 0.5rem; /* Consistent margin above errors */
+  }
+  
+  /* Submit Button */
+  button {
+    width: 100%;
+    padding: 1rem; /* Larger button padding */
+    border: none;
+    border-radius: 0.75rem; /* Consistent with input fields */
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s;
+    margin-top: 1rem; /* Space above button */
+  }
+  
+  button:disabled {
+    background: #d1d5db;
+    cursor: not-allowed;
+  }
+  
+  button:not(:disabled) {
+    background: #00FF99;
+    color: white;
+  }
+  
+  button:not(:disabled):hover {
+    background: #00CC88;
+  }
+  
+  /* Link Styling */
+  .text-sm {
+    text-align: center;
+    margin-top: 1.5rem; /* Increased space above the link */
+    font-size: 0.9rem;
+    color: #6b7280;
+  }
+  
+  .text-sm a {
+    color: #00FF99;
+    text-decoration: none;
+    font-weight: 600;
+  }
+  
+  .text-sm a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 480px) {
+    .w-96 {
+      padding: 2rem; /* Slightly reduce padding for small screens */
+      border-radius: 0.75rem;
+    }
+  
+    h3 {
+      font-size: 1.6rem; /* Adjust heading size on small screens */
+      margin-bottom: 1.5rem;
+    }
+  
+    button {
+      padding: 0.8rem; /* Adjust button padding */
+    }
+  
+    .form-group {
+      gap: 0.5rem; /* Slightly reduce input gaps */
+    }
+  }
+  

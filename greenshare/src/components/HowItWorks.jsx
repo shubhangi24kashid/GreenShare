@@ -33,7 +33,7 @@ const HowItWorks = () => {
         {steps.map((step) => (
           <div key={step.id} className="step-card">
             <img src={step.image} alt={step.title} />
-            <h3>{step.title}</h3>
+            <h3 className="step">{step.title}</h3>
             <p>{step.description}</p>
           </div>
         ))}

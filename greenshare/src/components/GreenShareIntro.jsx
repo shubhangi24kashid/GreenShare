@@ -1,5 +1,6 @@
 import React from "react";
 import "./GreenShareIntro.css";
+import { Link } from 'react-router-dom';
 
 const GreenShareIntro = () => {
   return (
@@ -10,7 +11,11 @@ const GreenShareIntro = () => {
       {/* Intro Text */}
       <div className="intro-text">
         <h1>Start Swapping For A Greener World</h1>
-        <button className="intro-btn">Get Started</button>
+       
+
+<Link to="/register">
+  <button className="intro-btn">Get Started</button>
+</Link>
       </div>
 
       {/* Cloud Overlay */}

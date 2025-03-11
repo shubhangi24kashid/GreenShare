@@ -16,6 +16,7 @@
     display: flex;
     justify-content: space-between;
     gap: 2rem;
+    align-items: center;
   }
   
   .step-card {
@@ -31,9 +32,11 @@
     margin-bottom: 1rem;
   }
   
-  .step-card h3 {
+  .step{
     font-size: 1.5rem;
     margin-bottom: 1rem;
+    align-items: center;
+    color: black;
   }
   
   .step-card p {
