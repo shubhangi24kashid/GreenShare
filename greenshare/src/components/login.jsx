@@ -25,7 +25,7 @@ const Login = () => {
     setIsLoggingIn(true);
     try {
       await doSignInWithEmailAndPassword(email, password);
-      navigate('/home');
+      navigate('/');
     } catch (error) {
       setErrorMessage(error.message || 'Login failed');
     } finally {
@@ -34,7 +34,7 @@ const Login = () => {
   };
 
   // Redirect if already logged in
-  if (userLoggedIn) return <Navigate to="/home" replace={true} />;
+  if (userLoggedIn) return <Navigate to="/" replace={true} />;
 
   return (
     <main className="w-full h-screen flex items-center justify-center bg-gray-100">
