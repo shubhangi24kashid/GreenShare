@@ -5,13 +5,13 @@ import { getAuth } from 'firebase/auth'
 
 
 const firebaseConfig = {
-  apiKey: "AIzaSyAsu3Gi_3HriRuNyFhxt8_27W3b_rRDQmo",
-  authDomain: "greenshare-882a9.firebaseapp.com",
-  projectId: "greenshare-882a9",
-  storageBucket: "greenshare-882a9.firebasestorage.app",
-  messagingSenderId: "685641723362",
-  appId: "1:685641723362:web:29dd982fc51097ae2f5dbb",
-  measurementId: "G-1YMF1Q25F3"
+  apiKey: process.env.REACT_APP_FIREBASE_API_KEY,
+  authDomain: process.env.REACT_APP_FIREBASE_AUTH_DOMAIN,
+  projectId: process.env.REACT_APP_FIREBASE_PROJECT_ID,
+  storageBucket: process.env.REACT_APP_FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: process.env.REACT_APP_FIREBASE_MESSAGING_SENDER_ID,
+  appId: process.env.REACT_APP_FIREBASE_APP_ID,
+  measurementId: process.env.REACT_APP_FIREBASE_MEASUREMENT_ID
 };
 
 // Initialize Firebase
