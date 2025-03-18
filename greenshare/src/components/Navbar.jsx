@@ -1,38 +1,43 @@
-// src/components/Navbar.jsx
 import React, { useState } from "react";
+import { Link, useLocation } from "react-router-dom";
+import { useAuth } from "../contexts/authContext.jsx";
+
 import "./Navbar.css";
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
+  const { user, logout } = useAuth();
+  const location = useLocation();
 
-  const toggleMenu = () => {
-    setMenuOpen(!menuOpen);
-  };
+  const toggleMenu = () => setMenuOpen(!menuOpen);
+  const isActive = (path) => location.pathname === path;
 
   return (
     <nav className="navbar">
-      {/* Logo */}
       <div className="logo">
-        <a href="/">GreenShare</a>
+        <Link to="/">GreenShare</Link>
       </div>
 
-      {/* Navigation Links (Using <div> Instead of <ul>) */}
       <div className={menuOpen ? "nav-links open" : "nav-links"}>
-        <a href="/">Home</a>
-        <a href="/listings">Listings</a>
-        <a href="/about">About</a>
-        <a href="/support">Support</a>
+        <Link to="/" className={isActive("/") ? "active" : ""}>Home</Link>
+        <Link to="/listings" className={isActive("/listings") ? "active" : ""}>Listings</Link>
+        <Link to="/about" className={isActive("/about") ? "active" : ""}>About</Link>
+        <Link to="/support" className={isActive("/support") ? "active" : ""}>Support</Link>
       </div>
 
-      {/* Auth Buttons */}
       <div className="auth-buttons">
-        <a href="/login" className="login-btn">Login</a>
-        <a href="/Register" className="get-started-btn">Get Started</a>
+        {!user ? (
+          <>
+            <Link to="/login" className="login-btn">Login</Link>
+            <Link to="/register" className="get-started-btn">Get Started</Link>
+          </>
+        ) : (
+          <button onClick={logout} className="logout-btn">Logout</button>
+        )}
       </div>
 
-      {/* Mobile Menu Toggle */}
-      <button className="menu-toggle" onClick={toggleMenu}>
-        ☰
+      <button className="menu-toggle" onClick={toggleMenu} aria-label="Toggle Menu">
+        {menuOpen ? "✕" : "☰"}
       </button>
     </nav>
   );
